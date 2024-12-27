@@ -45,13 +45,13 @@ Run the `run` script to set up the environment:
 ### Step 3: Insert the Kernel Module
 Insert the kernel module to begin data collection:
 ```bash
-sudo insmod /root/kernel_module.ko
+insmod /root/kernel_module.ko
 ```
 
 ### Step 4: Create the Device Node
 Create the device node required for communication with the kernel module:
 ```bash
-sudo mknod /dev/kernel_tasks c 235 0
+mknod /dev/kernel_tasks c 235 0
 ```
 
 ### Step 5: Run the User-Space Application
