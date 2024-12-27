@@ -1,0 +1,1 @@
+sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic     -kernel $PWD/target/zImage     -append "console=ttyAMA0 root=/dev/vda"     -dtb $PWD/target/vexpress-v2p-ca9.dtb     -drive if=none,file=$PWD/target/rootfs.ext4,format=raw,id=hd0     -device virtio-blk-device,drive=hd0 

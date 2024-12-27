@@ -20,10 +20,50 @@
   
 - **Real-time Monitoring**: Continuous updates of kernel data for live system monitoring.
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 1. A Linux-based system (e.g., Ubuntu, CentOS)
 2. Basic understanding of Linux kernel modules and C programming
-3. Development tools such as `gcc`, `make`, `kernel headers` (ensure they are installed on your system)
+3. Development tools such as `gcc`, `make`, and `kernel headers` (ensure they are installed on your system)
 
+## Installation and Running the Program
+
+Follow these steps to install and run the `kernel-monitor` project:
+
+### Step 1: Clone the Project
+Clone the project repository to your system:
+```bash
+git clone <repository_url> kernel-monitor
+cd kernel-monitor
+```
+
+### Step 2: Run the Setup Script
+Run the `run` script to set up the environment:
+```bash
+./run
+```
+
+### Step 3: Insert the Kernel Module
+Insert the kernel module to begin data collection:
+```bash
+sudo insmod /root/kernel_module.ko
+```
+
+### Step 4: Create the Device Node
+Create the device node required for communication with the kernel module:
+```bash
+sudo mknod /dev/kernel_tasks c 235 0
+```
+
+### Step 5: Run the User-Space Application
+Run the user-space application to start monitoring the kernel data:
+```bash
+/root/a.out
+```
+
+After completing these steps, the program will begin monitoring and visualizing key kernel data such as CPU usage, memory statistics, and task information in real-time.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+In this `README.md`, I've included the detailed steps (from cloning the repository to running the program) under the "Installation and Running the Program" section. Make sure to replace `<repository_url>` with the actual repository URL if necessary.
