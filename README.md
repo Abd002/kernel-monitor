@@ -62,8 +62,6 @@ Run the user-space application to start monitoring the kernel data:
 
 After completing these steps, the program will begin monitoring and visualizing key kernel data such as CPU usage, memory statistics, and task information in real-time.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
 In this `README.md`, I've included the detailed steps (from cloning the repository to running the program) under the "Installation and Running the Program" section. Make sure to replace `<repository_url>` with the actual repository URL if necessary.
